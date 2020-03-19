@@ -5,3 +5,4 @@ TODOS :
 - Add package size management (back and client)
 - Add step on how to localy run the project and how to deploy
 - Make import static ('src/actions/...' instead of '../../actions/...')
+- Add unit tests
