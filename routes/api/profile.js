@@ -1,6 +1,6 @@
 const express = require('express');
 const request = require('request');
-const config = require('config');
+const getConfig = require('../../config/configUtils');
 const router = express.Router();
 const auth = require('../../middleware/auth');
 const { check, validationResult } = require('express-validator');
@@ -332,7 +332,7 @@ router.get('/github/:username', (req, res) => {
       method: 'GET',
       headers: {
         'user-agent': 'node.js',
-        Authorization: `token ${config.get('githubToken')}`
+        Authorization: `token ${getConfig('GITHUB_TOKEN')}`
       }
     };
 
